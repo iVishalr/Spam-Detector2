@@ -10,13 +10,13 @@ def pre_process(df):
   lemmatizer = WordNetLemmatizer()
   df = df.str.replace(r'^.+@[^\.].*\.[a-z]{2,}$', 'emailaddress')
   # Replace URLs with 'webaddress'
-  df = df.str.replace(r'^http\://[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(/\S*)?$', 'webaddress')
+  # df = df.str.replace(r'^http\://[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(/\S*)?$', 'webaddress')
   # Replace money symbols with 'moneysymb' (£ can by typed with ALT key + 156)
-  df = df.str.replace(r'£|\$', 'moneysymb')
+  # df = df.str.replace(r'£|\$', 'moneysymb')
   # Replace 10 digit phone numbers (formats include parenthesis, spaces, no spaces, dashes) with 'phonenumber'
-  df = df.str.replace(r'^\(?[\d]{3}\)?[\s-]?[\d]{3}[\s-]?[\d]{4}$','phonenumber')
+  # df = df.str.replace(r'^\(?[\d]{3}\)?[\s-]?[\d]{3}[\s-]?[\d]{4}$','phonenumber')
   # Replace numbers with 'number'
-  df = df.str.replace(r'\d+(\.\d+)?', 'number')
+  # df = df.str.replace(r'\d+(\.\d+)?', 'number')
   # Remove punctuation
   df = df.str.replace(r'[^\w\d\s]', ' ')
   # Replace whitespace between terms with a single space
