@@ -1,0 +1,4 @@
+sklearn==0.21.30
+nltk
+numpy
+pandas
