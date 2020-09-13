@@ -1,4 +1,4 @@
-sklearn==0.21.30
+sklearn
 nltk
 numpy
 pandas
